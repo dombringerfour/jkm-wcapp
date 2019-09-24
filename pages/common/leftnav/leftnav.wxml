@@ -1,0 +1,5 @@
+<template name="leftnav">
+<view class="{{index==currentlist?'list active':'list'}}" bindtap='taplist' data-index='{{index}}' data-type='{{item}}'>
+<text catchtap='taplist' data-index='{{index}}' data-type='{{item}}'>{{item}}</text>
+</view>
+</template>

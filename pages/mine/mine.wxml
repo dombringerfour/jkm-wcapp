@@ -1,0 +1,17 @@
+<import src="../common/rightcontent/rightcontent"/>
+<!--pages/mine/mine.wxml-->
+<view class='outerbox'>
+<!-- 顶部导航 -->
+<view class='topbar'>
+<view wx:for="{{topbarlist}}" wx:key="{{index}}" class="{{index==currenttopbar?'active':''}}" bindtap='toactive' data-index='{{index}}'>{{item.title}}</view>
+</view>
+<!-- 内容 -->
+<scroll-view class='content' scroll-y="{{true}}" scroll-top="{{zerotop}}">
+<view>
+<block wx:for="{{list}}" wx:key="{{index}}">
+<template is="rightcontent" data="{{item,towant,tohavesee,tolove,index,tolink}}"/>
+</block>
+</view>
+<button bindtap='delete' wx:if="{{button}}">清空当前列表</button>
+</scroll-view>
+</view>

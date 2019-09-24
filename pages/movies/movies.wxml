@@ -1,0 +1,23 @@
+<import src="../common/leftnav/leftnav"/>
+<import src="../common/rightcontent/rightcontent"/>
+<!--pages/movies/movies.wxml-->
+<view class='outerbox'>
+<!-- 左边 -->
+<scroll-view scroll-y="{{true}}" class='left'>
+<view>
+<block wx:for="{{tagslist}}" wx:key="{{index}}">
+<template is="leftnav" data="{{item,taplist,currentlist,index}}"/>
+</block>
+</view>
+</scroll-view>
+
+<!-- 右边 -->
+<scroll-view class='right' scroll-y="{{true}}" scroll-top="{{zerotop}}" bindscroll="onscroll">
+<view>
+<block wx:for="{{movieslist}}" wx:key="{{index}}">
+<template is="rightcontent" data="{{item,towant,tohavesee,tolove,index,tolink}}"/>
+</block>
+</view>
+</scroll-view>
+
+</view>

@@ -1,0 +1,47 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/search/search",
+    "pages/mine/mine",
+    "pages/movies/movies",
+    "pages/tv/tv",
+    "pages/movies/movieslink/movieslink",
+    "pages/tv/tvlink/tvlink"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#007722",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#eeeeee",
+    "backgroundTextStyle": "light",
+    "enablePullDownRefresh": false
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/movies/movies",
+        "text": "电影",
+        "iconPath": "images/movies.png",
+        "selectedIconPath": "images/movies_active.png"
+      },
+      {
+        "pagePath": "pages/tv/tv",
+        "text": "电视剧",
+        "iconPath": "images/tv.png",
+        "selectedIconPath": "images/tv_active.png"
+      },
+      {
+        "pagePath": "pages/search/search",
+        "text": "搜索",
+        "iconPath": "images/search.png",
+        "selectedIconPath": "images/search_active.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "images/mine.png",
+        "selectedIconPath": "images/mine_active.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

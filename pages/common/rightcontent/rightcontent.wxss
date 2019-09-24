@@ -1,0 +1,74 @@
+.clearfix::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.movie {
+  width: 100%;
+  margin-bottom: 20rpx;
+  background-color: #fff;
+}
+
+.movie image {
+  width: 100%;
+  display: block;
+}
+
+/* 标题第一行 */
+.firrow{
+  width: 100%;
+}
+.firrow text {
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 40rpx;
+  padding: 0rpx 20rpx;
+  /* overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; */
+}
+
+.movie .title {
+  font-size: 38rpx;
+  /* display: block; */
+}
+
+.movie .new {
+  font-size: 30rpx;
+  background-color: #072;
+  color: #fff;
+  float: right;
+  /* margin-right: 20rpx; */
+}
+
+/* 标题下一行 */
+
+.secrow {
+  padding: 0 20rpx;
+}
+
+.ratetitle {
+  float: right;
+  font-size: 30rpx;
+  height: 70rpx;
+  line-height: 60rpx;
+}
+
+.rate {
+  font-size: 40rpx;
+  float: right;
+  color: #072;
+  padding: 0 20rpx;
+}
+
+.movie .want, .movie .havesee, .movie .love {
+  padding: 0rpx 20rpx;
+  font-size: 30rpx;
+  border: 1px solid #ccc;
+}
+
+.movie text.active {
+  color: #072;
+  border-color: #072;
+}

@@ -1,0 +1,32 @@
+@import "../common/leftnav/leftnav.wxss";
+@import "../common/rightcontent/rightcontent";
+/* pages/tv/tv.wxss */
+page{
+  height: 100%;
+  width: 100%;
+  background-color: #ccc;
+}
+/* 隐藏滚动条 */
+::-webkit-scrollbar{
+width: 0;
+height: 0;
+color: transparent;
+}
+/* 最外层盒子 */
+.outerbox{
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+/* 左边 */
+.left{
+  background-color: #fff;
+flex: 2;
+border-right: 1px solid #f0f0f0;
+}
+
+/* 右边 */
+.right{
+  flex: 7;
+}
+

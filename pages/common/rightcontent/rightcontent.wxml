@@ -1,0 +1,16 @@
+<template name="rightcontent">
+<view class='movie clearfix' data-link='{{item.url}}' bindtap='tolink'>
+<image src='{{item.cover}}' mode='widthFix' data-link='{{item.url}}'></image>
+<view class='firrow'>
+<text class='title' data-link='{{item.url}}'>{{item.title}}</text>
+<text class='new' wx:if="{{item.is_new}}">new</text>
+</view>
+<view class='secrow'>
+<text class="{{item.want?'want active':'want'}}" catchtap='towant' data-index='{{index}}' data-item='{{item}}'>想看</text>
+<text class="{{item.havesee?'havesee active':'havesee'}}" catchtap='tohavesee' data-index='{{index}}' data-item='{{item}}'>看过</text>
+<text class="{{item.love?'love active':'love'}}" catchtap='tolove' data-index='{{index}}' data-item='{{item}}'>喜欢</text>
+<text class='rate' data-link='{{item.url}}'>{{item.rate}}</text>
+<text class='ratetitle'>{{item.rate>10?'出品时间':'豆瓣评分'}}:</text>
+</view>
+</view>
+</template>

@@ -1,0 +1,49 @@
+<import src="../common/rightcontent/rightcontent"/>
+<!--pages/search/search.wxml-->
+  <view class='page_row'>
+    <!-- 搜索框 -->
+    <view class="search">
+      <view class="search_arr">
+        <icon class="searchcion" size='20' type='search'></icon>
+        <input type='text' class="" placeholder="请输入关键字" value="{{text}}" bindconfirm='search' bindblur='setDataText'/>
+      </view>
+    </view>
+    <!-- 搜索按钮 -->
+    <view class='sousuo' catchtap='getSearchListInfo'>搜索</view>
+  </view>
+
+  <!-- 搜索内容 -->
+<scroll-view class='content' scroll-y="{{true}}" scroll-top="{{zerotop}}">
+  <view class='suggestSearch' wx:if="{{searchList.length==0}}">
+    <text class='suggest'>推荐搜索:</text>
+    <text class='tab' catchtap='setTextandSearch' data-text='我是大哥大'>我是大哥大</text>
+    <text class='tab' catchtap='setTextandSearch' data-text='热血高校'>热血高校</text>
+    <text class='tab' catchtap='setTextandSearch' data-text='金田一少年事件簿'>金田一少年事件簿</text>
+    <text class='tab' catchtap='setTextandSearch' data-text='心理游戏'>心理游戏</text>
+    <text class='tab' catchtap='setTextandSearch' data-text='犬舍'>犬舍</text>
+    <text class='tab' catchtap='setTextandSearch' data-text='毒液:致命守护'>毒液:致命守护</text>
+    <text class='tab' catchtap='setTextandSearch' data-text='招魂'>招魂</text>
+    <text class='tab' catchtap='setTextandSearch' data-text='鬼影实录'>鬼影实录:东京之夜</text>
+    <text class='tab' catchtap='setTextandSearch' data-text='赌博默示录'>赌博默示录</text>
+  </view>
+<view wx:if="{{searchList.length!=0}}">
+<block wx:for="{{searchList}}" wx:key="{{index}}">
+<view class='movie clearfix' data-link='{{item.url}}' bindtap='tolink'>
+<image src='{{item.cover}}' mode='widthFix' data-link='{{item.url}}'></image>
+<view class='firrow'>
+<text class='title' data-link='{{item.url}}'>{{item.title}}</text>
+<text class='new' wx:if="{{item.is_new}}">new</text>
+</view>
+<view class='secrow'>
+<text class="{{item.want?'want active':'want'}}" catchtap='towant' data-index='{{index}}' data-item='{{item}}'>想看</text>
+<text class="{{item.havesee?'havesee active':'havesee'}}" catchtap='tohavesee' data-index='{{index}}' data-item='{{item}}'>看过</text>
+<text class="{{item.love?'love active':'love'}}" catchtap='tolove' data-index='{{index}}' data-item='{{item}}'>喜欢</text>
+<text class='rate' data-link='{{item.url}}' wx:if="{{item.rate}}">{{item.rate}}年</text>
+<text class='ratetitle' wx:if="{{item.rate}}">出品时间:</text>
+</view>
+</view>
+</block>
+</view>
+</scroll-view>
+
+

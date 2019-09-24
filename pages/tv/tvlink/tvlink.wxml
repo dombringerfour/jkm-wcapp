@@ -1,0 +1,2 @@
+<!--pages/movies/movieslink/movieslink.wxml-->
+<web-view src="{{movieslink}}"></web-view>

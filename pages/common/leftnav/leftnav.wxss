@@ -1,0 +1,12 @@
+.list{
+  text-align: center;
+  width: 100%;
+  height: 80rpx; 
+  line-height: 80rpx; 
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 30rpx;
+}
+.list.active{
+  background-color: #007722;
+  color: #fff;
+}
